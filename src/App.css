@@ -1,0 +1,46 @@
+/* Estilo para a página principal */
+body {
+    background: linear-gradient(to right, #eff6ff, #dbeafe);
+    /* Gradiente azul claro */
+    font-family: 'Arial', sans-serif;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.25rem;
+    /* 36px */
+    font-weight: 800;
+    /* Extra bold */
+    color: #1f2937;
+    /* Cor cinza escuro */
+    margin-bottom: 2.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    /* Espaço entre os links */
+    margin-bottom: 2.5rem;
+}
+
+nav a {
+    font-size: 1.125rem;
+    /* 18px */
+    color: #3b82f6;
+    /* Azul */
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    color: #2563eb;
+    /* Azul escuro */
+    transform: scale(1.05);
+    /* Aumento suave no tamanho */
+}
