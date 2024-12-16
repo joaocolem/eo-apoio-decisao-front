@@ -6,7 +6,7 @@ const EventRow = ({ event }) => (
         <td className={tw`px-4 py-2`}>{event.title}</td>
         <td className={tw`px-4 py-2`}>{event.date}</td>
         <td className={tw`px-4 py-2`}>{event.description}</td>
-        <td className={tw`px-4 py-2`}>{event.organizer.name}</td>
+        <td className={tw`px-4 py-2`}>{event.organizerName}</td>
         <td className={tw`px-4 py-2`}>{event.maxParticipants}</td>
         <td className={tw`px-4 py-2`}>{event.registeredParticipants}</td>
     </tr>

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import organizerService from '../../../api/services/organizerService';  // Importe o serviço que você criou
+import organizerService from '../../../api/services/organizerService'; 
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 
-// Registre os componentes do Chart.js
+
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const OrganizerPage = () => {
@@ -22,21 +22,21 @@ const OrganizerPage = () => {
         fetchOrganizers();
     }, []);
 
-    // Preparar os dados para o gráfico
+ 
     const chartData = {
-        labels: organizers.map((organizer) => organizer.name), // Usar o nome do organizador como label
+        labels: organizers.map((organizer) => organizer.name), 
         datasets: [
             {
                 label: 'Média de Avaliação',
-                data: organizers.map((organizer) => organizer.averageRating), // Usar a média de avaliação como valor
-                backgroundColor: 'rgba(75, 192, 192, 0.6)', // Cor de fundo das barras
-                borderColor: 'rgba(75, 192, 192, 1)', // Cor da borda das barras
-                borderWidth: 1, // Largura da borda
+                data: organizers.map((organizer) => organizer.averageRating), 
+                backgroundColor: 'rgba(75, 192, 192, 0.6)', 
+                borderColor: 'rgba(75, 192, 192, 1)', 
+                borderWidth: 1, 
             },
         ],
     };
 
-    // Opções do gráfico
+ 
     const options = {
         responsive: true,
         plugins: {

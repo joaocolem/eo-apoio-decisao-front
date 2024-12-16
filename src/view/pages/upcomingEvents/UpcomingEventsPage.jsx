@@ -1,20 +1,20 @@
 import { useState, useEffect } from 'react';
-import eventService from '../../../api/services/eventService';  // Importe o serviço que você criou
-import EventTable from './eventTable/Table';  // Importe o componente da tabela
+import eventService from '../../../api/services/eventService';  
+import EventTable from './eventTable/Table';  
 
 const UpcomingEventsPage = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    // Faz a requisição para a API usando o serviço
+
     eventService.getUpcomingEvents()
       .then((data) => {
-        setEvents(data);  // Atualiza o estado com os eventos
+        setEvents(data);  
       })
       .catch((error) => {
         console.error('Erro ao buscar eventos:', error);
       });
-  }, []); // Executa uma vez quando o componente for montado
+  }, []); 
 
   return (
     <div>
